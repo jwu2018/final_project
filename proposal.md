@@ -20,14 +20,14 @@ Assessment of possible risk factors for suicide
 - Exercise
 - Therapy
 
-##Technologies We Will Use
+## Technologies We Will Use
 ### Frontend
-React
-Typescript
-Some way of producing graphs/visualization
-D3.js
-Canvas
-Various libraries that wrap those
+- React
+- Typescript
+- Some way of producing graphs/visualization
+- D3.js
+- Canvas
+- Various libraries that wrap those
 
 ### Backend
 Node w/ Express
