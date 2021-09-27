@@ -40,7 +40,9 @@ Possibly R/Python for data cleaning
 
 ## Rough Wireframes
 ![data exploration and statistics](screenshots/Frame_2.png)
+
 Interactive data exploration and statistics
 
 ![survey](screenshots/Frame_1.png)
+
 Example survey questions
