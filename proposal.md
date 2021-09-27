@@ -14,11 +14,12 @@ Depression as measured by the PHQ-9
 
 Assessment of possible risk factors for suicide
 - Risk factors like
-- Having ADHD, anxiety, or other diagnoses
-- Sexuality and gender identity
-- Age
-- COVID/global pandemic
-- Factors that correlate/causally link to better mental health
+  - Having ADHD, anxiety, or other diagnoses
+  - Sexuality and gender identity
+  - Age
+  - COVID/global pandemic
+
+Factors that correlate/causally link to better mental health
 - Exercise
 - Therapy
 
