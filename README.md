@@ -49,3 +49,29 @@ Think of 1,3, and 4 in particular in a similar vein to the design / tech achieve
 ## FAQs
 
 - **Can I use XYZ framework?** You can use any web-based frameworks or tools available, but for your server programming you need to use Node.js. Your client-side scripting language should be either JavaScript or TypeScript.
+
+
+# Mental Health and Suicide Data Final Project
+
+## How to run locally
+This project is broken up into two parts currently, the frontend and the backup. This project uses `yarn` instead of `npm` so make sure you install it with:
+```
+npm install -g yarn
+```
+
+(Yarn is just an npm replacement that improves the package management, and makes installing new packages faster. You can read more about it [on their website](https://yarnpkg.com/getting-started/usage))
+
+To run the frontend:
+```
+cd frontend
+yarn install // only the first time to install the dependancies
+yarn start // starts the react dev server
+```
+
+To run the backend
+```
+cd backend
+yarn install // only the first time to install the dependancies
+yarn start // starts the react dev server
+```
+If you update the backend, you will have to stop the server and rerun it. This is only neccessary when you change server.js, the actual frontend pages get served on their own.
