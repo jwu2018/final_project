@@ -1,6 +1,10 @@
 import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import './App.css';
-
+import SuicideByState from './visualizations/SuicideByState';
+import WorldwideMentalIllness from './visualizations/WorldwideMentalIllness';
+import USMentalIllness from './visualizations/USMentalIllness';
+import WorldwideSuicide from './visualizations/WorldwideSuicide';
+import PHQ9Correlation from 'visualizations/PHQ9Correlation';
 function App() {
 
   const [dreams, setDreams] = useState<string[] | null>(null);
@@ -60,8 +64,25 @@ function App() {
           <li key={idx}>{dream}</li>
         )}
       </ul>
+      <div style={{ "height": "600px", "width": "1000px" }}>
+        <USMentalIllness />
+      </div>
+      <div style={{ "height": "600px", "width": "1000px" }}>
+        <SuicideByState />
+      </div>
+      <div style={{ "height": "600px", "width": "1000px" }}>
+        <WorldwideMentalIllness />
+      </div>
+      <div style={{ "height": "600px", "width": "100%" }}>
+        <WorldwideSuicide />
+      </div>
+      <div style={{ "height": "600px", "width": "1000px" }}>
+        <PHQ9Correlation />
+      </div>
 
-    </div>
+
+
+    </div >
   );
 }
 
