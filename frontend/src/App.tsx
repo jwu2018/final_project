@@ -61,7 +61,7 @@ function App() {
         <button type="submit" className="btn btn__primary btn__lg">
           Add Dream
         </button>
-      </form>
+      </form> 
 
       <br />
       <div style={{ "height": "600px", "width": "1000px" }}>
