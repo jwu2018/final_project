@@ -5,6 +5,7 @@ import WorldwideMentalIllness from './visualizations/WorldwideMentalIllness';
 import USMentalIllness from './visualizations/USMentalIllness';
 import WorldwideSuicide from './visualizations/WorldwideSuicide';
 import PHQ9Correlation from 'visualizations/PHQ9Correlation';
+import Questions from 'Questions';
 function App() {
 
   const [dreams, setDreams] = useState<string[] | null>(null);
@@ -47,7 +48,8 @@ function App() {
 
   return (
     <div className="App">
-      <form onSubmit={handleSubmit}>
+      <Questions />
+      {/* <form onSubmit={handleSubmit}>
         <input
           type="text"
           id="new-dream-input"
@@ -80,7 +82,7 @@ function App() {
         <PHQ9Correlation />
       </div>
 
-
+ */}
 
     </div >
   );
