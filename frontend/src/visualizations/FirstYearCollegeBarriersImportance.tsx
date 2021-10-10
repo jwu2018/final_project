@@ -3,11 +3,11 @@ import barriers from "data/treatment-barriers/first_year_college_barriers";
 
 barriers.sort((b,a) => (a.Important+a["Very important"]) - (b.Important+b["Very important"]));
 
-const FirstYearCollegeBarriers = (props: any) => {
+const FirstYearCollegeBarriersImportance = (props: any) => {
     return (
         <ResponsiveBar
             data={barriers}
-            keys={['Unimportant', 'Of little importance', 'Moderately important', 'Important', 'Very important']}
+            keys={['Important', 'Very important']}
             indexBy="short-barrier"
             groupMode="stacked"
             margin={{ top: 50, right: 100, bottom: 80, left: 60 }}
@@ -46,4 +46,4 @@ const FirstYearCollegeBarriers = (props: any) => {
     );
 };
 
-export default FirstYearCollegeBarriers;
+export default FirstYearCollegeBarriersImportance;
