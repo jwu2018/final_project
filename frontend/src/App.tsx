@@ -65,6 +65,15 @@ function App() {
 
       <br />
       <div style={{ "height": "600px", "width": "1000px" }}>
+        <SuicideLaws />
+      </div>
+      <div style={{ "height": "600px", "width": "1000px" }}>
+        <SuicideHotlines />
+      </div>
+      <div style={{ "height": "600px", "width": "1000px" }}>
+        <ActionPlansByCountry />
+      </div>
+      <div style={{ "height": "600px", "width": "1000px" }}>
         <USMentalIllness />
       </div>
       <div style={{ "height": "600px", "width": "1000px" }}>
