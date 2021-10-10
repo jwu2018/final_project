@@ -91,6 +91,33 @@ const Thanks = () => {
         <li><a href="https://afsp.org/become-a-suicide-prevention-public-policy-advocate">
           Become a Suicide Prevention Advocate</a></li>
 
+        <br />
+        {/*<div style={{ "height": "600px", "width": "1000px" }}>
+        <USMentalIllness />
+      </div>
+      <div style={{ "height": "600px", "width": "1000px" }}>
+        <SuicideByState />
+      </div>
+      <div style={{ "height": "600px", "width": "1000px" }}>
+        <WorldwideMentalIllness />
+      </div>
+      <div style={{ "height": "600px", "width": "100%" }}>
+        <WorldwideSuicide />
+      </div>
+      <div style={{ "height": "600px", "width": "1000px" }}>
+        <PHQ9Correlation />
+      </div>
+      <div style={{ "height": "600px", "width": "1700px" }}>
+        <BarriersNCSR />
+      </div>
+      <div style={{ "height": "600px", "width": "1000px" }}>
+        <BarriersNCSRGrouped />
+      </div>
+      <div style={{ "height": "600px", "width": "1090px" }}>
+        <FirstYearCollegeBarriers />
+      </div>
+      */}
+
       </ul>
 
       <h2>Our Sources</h2>
