@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ExampleVis from 'SurveySections/ExampleVis';
 import Factors from 'SurveySections/Factors';
 import Prevelance from 'SurveySections/Prevelance';
+import PrevelanceVis from 'SurveySections/PrevelanceVis';
 import Prevention from 'SurveySections/Prevention';
 import Treatment from 'SurveySections/Treatment';
 
@@ -12,7 +13,7 @@ const Questions = () => {
 
     const pageArray = [
         <Prevelance data={data} dataCallback={setData} />,
-        <ExampleVis data={data} />,
+        <PrevelanceVis data={data} />,
         <Factors data={data} dataCallback={setData} />,
         <ExampleVis data={data} />,
         <Treatment data={data} dataCallback={setData} />,

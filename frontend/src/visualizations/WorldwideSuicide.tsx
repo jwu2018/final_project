@@ -19,7 +19,7 @@ const WorldwideSuicide = (props: any) => {
             data={data}
             keys={['rate']}
             indexBy="Country"
-            margin={{ top: 50, right: 130, bottom: 80, left: 60 }}
+            margin={{ top: 50, right: 20, bottom: 80, left: 60 }}
             padding={0.2}
             // valueScale={{ type: 'linear' }}
             // indexScale={{ type: 'band', round: true }}
