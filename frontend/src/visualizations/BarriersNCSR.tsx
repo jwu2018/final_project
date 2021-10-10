@@ -8,7 +8,7 @@ const BarriersNCSR = (props: any) => {
             keys={['mild', 'moderate', 'severe']}
             indexBy="reason"
             groupMode="grouped"
-            margin={{ top: 50, right: 10, bottom: 80, left: 60 }}
+            margin={{ top: 100, right: 100, bottom: 100, left: 100 }}
             padding={0.3}
             // valueScale={{ type: 'linear' }}
             // indexScale={{ type: 'band', round: true }}

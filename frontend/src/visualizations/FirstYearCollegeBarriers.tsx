@@ -10,7 +10,7 @@ const FirstYearCollegeBarriers = (props: any) => {
             keys={['Unimportant', 'Of little importance', 'Moderately important', 'Important', 'Very important']}
             indexBy="short-barrier"
             groupMode="stacked"
-            margin={{ top: 50, right: 100, bottom: 80, left: 60 }}
+            margin={{ top: 100, right: 100, bottom: 100, left: 100 }}
             padding={0.3}
             // valueScale={{ type: 'linear' }}
             // indexScale={{ type: 'band', round: true }}
@@ -22,7 +22,7 @@ const FirstYearCollegeBarriers = (props: any) => {
             axisBottom={{
                 tickSize: 5,
                 tickPadding: 5,
-                tickRotation: 20,
+                tickRotation: 0,
                 // legend: 'Diagnosis',
                 legendPosition: 'middle',
                 legendOffset: 32

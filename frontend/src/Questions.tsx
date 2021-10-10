@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ExampleVis from 'SurveySections/ExampleVis';
+import TreatmentVis from 'SurveySections/TreatmentVis';
 import Factors from 'SurveySections/Factors';
 import FactorsVis from 'SurveySections/FactorsVis';
 import Prevelance from 'SurveySections/Prevelance';
@@ -20,7 +21,7 @@ const Questions = () => {
         <Factors data={data} dataCallback={setData} />,
         <FactorsVis data={data} />,
         <Treatment data={data} dataCallback={setData} />,
-        <ExampleVis data={data} />,
+        <TreatmentVis data={data} />,
         <PreventionVizzes />,
         <Prevention data={data} dataCallback={setData} />,
         <PreventionUserVis data={data} />
