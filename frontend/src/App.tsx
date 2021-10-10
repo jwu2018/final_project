@@ -6,8 +6,7 @@ import WorldwideMentalIllness from './visualizations/WorldwideMentalIllness';
 import USMentalIllness from './visualizations/USMentalIllness';
 import WorldwideSuicide from './visualizations/WorldwideSuicide';
 import PHQ9Correlation from 'visualizations/PHQ9Correlation';
-
-
+import Questions from 'Questions';
 function App() {
 
   // const [dreams, setDreams] = useState<string[] | null>(null);
@@ -50,28 +49,18 @@ function App() {
 
   return (
     <div className="App">
-      <form>
-        <div className="row">
-          <div className="six columns">
-            <label htmlFor="exampleEmailInput">Your email</label>
-            <input className="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput" />
-          </div>
-          <div className="six columns">
-            <label htmlFor="exampleRecipientInput">Reason for contacting</label>
-            <select className="u-full-width" id="exampleRecipientInput">
-              <option value="Option 1">Questions</option>
-              <option value="Option 2">Admiration</option>
-              <option value="Option 3">Can I get your number?</option>
-            </select>
-          </div>
-        </div>
-        <label htmlFor="exampleMessage">Message</label>
-        <textarea className="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
-        <label className="example-send-yourself-copy">
-          <input type="checkbox" />
-          <span className="label-body">Send a copy to yourself</span>
-        </label>
-        <input className="button-primary" type="submit" value="Submit" />
+      <Questions />
+      {/* <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          id="new-dream-input"
+          name="text"
+          autoComplete="off"
+          onChange={handleInputChange}
+        />
+        <button type="submit" className="btn btn__primary btn__lg">
+          Add Dream
+        </button>
       </form>
 
       <br />
@@ -91,7 +80,7 @@ function App() {
         <PHQ9Correlation />
       </div>
 
-
+ */}
 
     </div >
   );
