@@ -8,7 +8,7 @@ import action_plans_data from 'data/prevention/action_plans'
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-const ActionPlansBar = ( props: any ) => {
+const ActionPlansByCountryBar = ( props: any ) => {
     return ( <ResponsiveBar
         data={action_plans_data}
         keys={[ 'existing plans', 'developing plans' ]}
@@ -74,4 +74,4 @@ const ActionPlansBar = ( props: any ) => {
     />);
 };
 
-export default ActionPlansBar;
+export default ActionPlansByCountryBar;
