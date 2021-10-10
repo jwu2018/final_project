@@ -53,6 +53,21 @@ Think of 1,3, and 4 in particular in a similar vein to the design / tech achieve
 
 # Mental Health and Suicide Data Final Project
 
+## Project Description
+Mental health is a broad and complicated subject. We wanted to present people with statistics and information about mental health and suicide in a way that is engaging and helps people relate to those numbers on a more personal level. Though the statistics themselves are important, it can be easy to forget numbers and thus an interactive overview of statistics on mental health and suicide may not be as impactful. Therefore, we want the site visitors to also have the ability to be more introspective. Site visitors have the opportunity to answer questions about their life and experiences, then see information about how they compare to the broader population, as well as how that might be relevant to mental health or sucide. 
+
+As well as the more personal interactive form, the site also has an interactive overview of various statistics relating to mental health and suicide we aggregated from high quality sources. The site will anonymously record peoples’ responses to questions and provide some comparison of population level trends versus what people on the site responded with.
+
+On the site, visualizations and survey questions are divided into five main sections:
+
+1. Prevalence of Suicide
+2. Factors That Contribute to Suicide and/or Mental Illness
+3. How Mental Illnesses Are Treated
+4. Suicide Prevention Methods
+5. How Society and Different Organizations Like Colleges Can Address Mental Health in the Community
+
+
+
 ## How to run locally
 This project is broken up into two parts currently, the frontend and the backup. This project uses `yarn` instead of `npm` so make sure you install it with:
 ```
@@ -75,3 +90,26 @@ yarn install // only the first time to install the dependancies
 yarn start // starts the react dev server
 ```
 If you update the backend, you will have to stop the server and rerun it. This is only neccessary when you change server.js, the actual frontend pages get served on their own.
+
+## Technologies We Used
+### Frontend
+- React
+- Typescript
+- Data visualizations
+  - D3.js
+  - Nivo
+  - R
+
+### Backend
+- Node w/ Express server
+    - Javascript server
+- MongoDB for data storage
+- Yarn
+
+## Challenges Faced
+
+## Group Member Contributions
+### Alan Healy
+### Alex Kinley
+### Niko Pelletier
+### Jyalu Wu
