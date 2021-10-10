@@ -6,6 +6,7 @@ import USMentalIllness from './visualizations/USMentalIllness';
 import WorldwideSuicide from './visualizations/WorldwideSuicide';
 import PHQ9Correlation from 'visualizations/PHQ9Correlation';
 import Questions from 'Questions';
+
 function App() {
 
   const [dreams, setDreams] = useState<string[] | null>(null);
@@ -81,9 +82,7 @@ function App() {
       <div style={{ "height": "600px", "width": "1000px" }}>
         <PHQ9Correlation />
       </div>
-
  */}
-
     </div >
   );
 }
