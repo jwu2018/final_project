@@ -1,18 +1,18 @@
 import { ResponsiveBar } from '@nivo/bar';
-import phq_score_correlation from '../data/alan/ncha_attempted_suicide_data';
+import ncha_attempted_suicide_data from '../data/ncha/ncha_attempted_suicide_data';
 
 const NCHAAttemptedSuicide = (props: any) => {
     return (
         <div style={{ width: '800px', height: '600px' }}>
             <ResponsiveBar
-                data={phq_score_correlation}
+                data={ncha_attempted_suicide_data}
                 keys={['male', 'female', 'total']}
                 indexBy="answer"
-                margin={{ top: 50, right: 10, bottom: 80, left: 60 }}
+                margin={{ top: 50, right: 50, bottom: 150, left: 60 }}
                 padding={0.3}
                 // valueScale={{ type: 'linear' }}
                 // indexScale={{ type: 'band', round: true }}
-                valueFormat='.2%'
+                valueFormat={(v) => v+'%'}
                 groupMode="grouped"
                 colors={{ scheme: 'nivo' }}
                 borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
@@ -21,7 +21,7 @@ const NCHAAttemptedSuicide = (props: any) => {
                 axisBottom={{
                     tickSize: 5,
                     tickPadding: 5,
-                    tickRotation: 0,
+                    tickRotation: 45,
                     // legend: 'Diagnosis',
                     legendPosition: 'middle',
                     legendOffset: 32
@@ -33,7 +33,7 @@ const NCHAAttemptedSuicide = (props: any) => {
                     legend: 'Percentage',
                     legendPosition: 'middle',
                     legendOffset: -50,
-                    format: '.1%'
+                    format: (v) => (v + '%')
                 }}
                 // labelSkipWidth={12}
                 // labelSkipHeight={12}
