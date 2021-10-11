@@ -1,3 +1,4 @@
+import { Bar, ResponsiveBar } from "@nivo/bar";
 import React, { useEffect, useState } from "react";
 
 const getSurveyData = async () => {
@@ -6,16 +7,107 @@ const getSurveyData = async () => {
 }
 
 const SurveyResponses = () => {
-    const [responseData, setResponseData] = useState({});
+    const [responseData, setResponseData] = useState<any[]>([]);
 
     useEffect(() => {
         getSurveyData().then(setResponseData);
     }, [])
 
+    if (responseData.length === 0) {
+        return (<div></div>);
+    }
+    const prevelanceData = responseData.find(d => d?.survey === 'prevelance');
+    const phq9Data = responseData.find(d => d?.survey === 'phq9');
+    const factorsData = responseData.find(d => d?.survey === 'factors');
+    const treatmentData = responseData.find(d => d?.survey === 'treatment');
+    const preventionData = responseData.find(d => d?.survey === 'prevention');
     console.log(responseData);
 
+    let countryResponses = prevelanceData.questions.country;
+    let mostCommonCountries = Object.keys(countryResponses).sort((a, b) => countryResponses[b] - countryResponses[a]);
+    let mostCommonCountriesData = mostCommonCountries.map(country => {
+        return { id: country, value: countryResponses[country] };
+    });
+
+    let stateResponses = prevelanceData.questions.state;
+    let mostCommonStates = Object.keys(stateResponses).sort((a, b) => stateResponses[b] - stateResponses[a]);
+    let mostCommonStatesData = mostCommonStates.map((state: any) => {
+        return { id: state, value: stateResponses[state] };
+    });
+
+    let phq9Responses = phq9Data.questions;
+
     return (
-        <div>hello world</div>
+        <div className="section">
+            <h2>Data from Survey Responses</h2>
+            <h3>The most common countries were...</h3>
+            <Bar
+                width={800}
+                height={400}
+                data={mostCommonCountriesData}
+                margin={{ top: 50, right: 10, bottom: 80, left: 60 }}
+                keys={['value']}
+                indexBy="id"
+                colors={{ scheme: 'nivo' }}
+                borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+                axisTop={null}
+                axisRight={null}
+                axisBottom={{
+                    tickSize: 5,
+                    tickPadding: 5,
+                    tickRotation: 0,
+                    legendPosition: 'middle',
+                    legendOffset: 32
+                }}
+                axisLeft={{
+                    tickSize: 5,
+                    tickPadding: 5,
+                    tickRotation: 0,
+                    legendPosition: 'middle',
+                    legendOffset: -50,
+                    // format: '.1%'
+                }}
+                // labelSkipWidth={12}
+                // labelSkipHeight={12}
+                enableLabel={false}
+                // labelTextColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+                isInteractive={true}
+            />
+            <h3>The most common states were...</h3>
+            <Bar
+                width={800}
+                height={400}
+                data={mostCommonStatesData}
+                margin={{ top: 50, right: 10, bottom: 80, left: 60 }}
+                keys={['value']}
+                indexBy="id"
+                colors={{ scheme: 'nivo' }}
+                borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+                axisTop={null}
+                axisRight={null}
+                axisBottom={{
+                    tickSize: 5,
+                    tickPadding: 5,
+                    tickRotation: 0,
+                    // legend: 'Disorder',
+                    legendPosition: 'middle',
+                    legendOffset: 32
+                }}
+                axisLeft={{
+                    tickSize: 5,
+                    tickPadding: 5,
+                    tickRotation: 0,
+                    legendPosition: 'middle',
+                    legendOffset: -50,
+                    // format: '.1%'
+                }}
+                // labelSkipWidth={12}
+                // labelSkipHeight={12}
+                enableLabel={false}
+                // labelTextColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+                isInteractive={true}
+            />
+        </div>
     )
 }
 
