@@ -4,6 +4,7 @@ Group Members: Alan Healy, Alex Kinley, Niko Pelletier, Jyalu Wu
 
 ## Project Description
 Website: https://group-14-final-project-2nrny.ondigitalocean.app/
+
 Demo Video: https://www.youtube.com/watch?v=X7JrgC3JO-w
 
 Mental health is a broad and complicated subject. We wanted to present people with statistics and information about mental health and suicide in a way that is engaging and helps people relate to those numbers on a more personal level. Though the statistics themselves are important, it can be easy to forget numbers and thus an interactive overview of statistics on mental health and suicide may not be as impactful. Therefore, we want the site visitors to also have the ability to be more introspective. Site visitors have the opportunity to answer questions about their life and experiences, then see information about how they compare to the broader population, as well as how that might be relevant to mental health or sucide.
