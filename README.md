@@ -108,11 +108,22 @@ If you update the backend, you will have to stop the server and rerun it. This i
 
 ## Group Member Contributions
 ### Alan Healy
+- Built the “society/colleges” questions and visualizations
+- Set up the static server
+
 ### Alex Kinley
-- Basic Project Structure
-- Some of the styling
-- Prevelance, Factors, and PHQ-9 data vizzes and survey sections
-- Website flow/data management
-- Backend integration
+- Built the “prevalence” questions and visualizations
+- Built the “factors” questions and visualizations
+- Set up the boilerplate for the website
+- Helped other group members with react, typescript, and nivo
+- Set up most of the website functionality
+- Acted as team leader for the project
+
 ### Niko Pelletier
+- Built the “treatments” questions and visualizations
+
 ### Jyalu Wu
+- Built the “prevention methods” questions and visualizations
+- Created wireframes for the website
+- Built the “welcome” and “thank you” pages
+- Set up the MongoDB
