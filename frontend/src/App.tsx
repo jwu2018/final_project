@@ -79,9 +79,7 @@ function App() {
       <div style={{ "height": "600px", "width": "1000px" }}>
         <PHQ9Correlation />
       </div>
-
  */}
-
     </div >
   );
 }
