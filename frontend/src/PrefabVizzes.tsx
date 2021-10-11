@@ -7,6 +7,7 @@ import WorldwideMentalIllness from 'visualizations/WorldwideMentalIllness';
 import WorldwideSuicide from 'visualizations/WorldwideSuicide';
 import FactorsVizzes from 'visualizations/FactorsVizzes';
 import PrevelanceVizzes from 'visualizations/PrevelanceVIzzes';
+import NCHAAttemptedSuicide from 'visualizations/ncha_attempted_suicide';
 
 
 const PrefabVizzes = () => {
@@ -21,6 +22,7 @@ const PrefabVizzes = () => {
         // <WorldwideSuicide/>,
 
         // todo this one we can keep
+        <NCHAAttemptedSuicide />,
         <PrevelanceVizzes />,
         <FactorsVizzes />,
         <PreventionVizzes />
