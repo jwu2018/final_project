@@ -10,7 +10,7 @@ import PrevelanceVizzes from 'visualizations/PrevelanceVIzzes';
 import NCHAAttemptedSuicide from 'visualizations/ncha_attempted_suicide';
 
 
-const PrefabVizzes = () => {
+const PrefabVizzes = (props: any) => {
     const [page, setPage] = useState(0);
 
     const pageArray = [
@@ -27,7 +27,12 @@ const PrefabVizzes = () => {
         <FactorsVizzes />,
         <PreventionVizzes />
     ]
+
+    const { nextCallback } = props;
     const next = () => {
+        if (page === pageArray.length - 1) {
+            nextCallback();
+        }
         setPage(page + 1);
     }
     const back = () => {

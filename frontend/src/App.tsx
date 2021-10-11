@@ -14,7 +14,7 @@ function App() {
 
   const sectionArray = [
     <Welcome />,
-    <PrefabVizzes />,
+    <PrefabVizzes nextCallback={next} />,
     <Questions nextCallback={next} />,
     <Thanks />,
     <SurveyResponses />,

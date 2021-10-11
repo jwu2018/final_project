@@ -96,9 +96,7 @@ If you update the backend, you will have to stop the server and rerun it. This i
 - React
 - Typescript
 - Data visualizations
-  - D3.js
   - Nivo
-  - R
 
 ### Backend
 - Node w/ Express server
