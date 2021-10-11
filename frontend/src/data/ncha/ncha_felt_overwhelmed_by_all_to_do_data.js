@@ -30,7 +30,7 @@ export default[
         "total": 18.2
     },
     {
-        "answer":"Anytime within the last 12 months",
+        "answer":"Anytime in the last 12 months",
         "male": 78.4,
         "female": 91.5,
         "total": 87.4
