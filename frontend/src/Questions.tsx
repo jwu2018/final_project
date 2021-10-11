@@ -49,12 +49,14 @@ const Questions = (props: any) => {
             sendToAnswersApi({ survey: pageArray[page].name, ...data });
 
         }
-        if (pageArray[page + 1].type === 'survey') {
-            setData({});
-        }
         if (page === pageArray.length - 1) {
             nextCallback();
         }
+
+        if (pageArray[page + 1]?.type === 'survey') {
+            setData({});
+        }
+
         setPage(page + 1);
     }
     const back = () => {
