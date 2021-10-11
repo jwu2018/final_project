@@ -18,7 +18,7 @@ On the site, visualizations and survey questions are divided into five main sect
 
 
 ## How to run locally
-This project is broken up into two parts currently, the frontend and the backup. This project uses `yarn` instead of `npm` so make sure you install it with:
+This project is broken up into two parts currently, the frontend and the backend. This project uses `yarn` instead of `npm` so make sure you install it with:
 ```
 @@ -75,3 +90,26 @@ yarn install // only the first time to install the dependancies
 yarn start // starts the react dev server
