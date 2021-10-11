@@ -5,14 +5,12 @@ barriers.sort((b,a) => (a.Important+a["Very important"]) - (b.Important+b["Very 
 
 const FirstYearCollegeBarriers = (props: any) => {
     return (
-        <>
-        <h3>Importance of Barriers to Treatment to First-Year Colege Students</h3>
         <ResponsiveBar
             data={barriers}
             keys={['Unimportant', 'Of little importance', 'Moderately important', 'Important', 'Very important']}
             indexBy="short-barrier"
             groupMode="stacked"
-            margin={{ top: 10, right: 250, bottom: 150, left: 100 }}
+            margin={{ top: 10, right: 250, bottom: 60, left: 100 }}
             padding={0.3}
             // valueScale={{ type: 'linear' }}
             // indexScale={{ type: 'band', round: true }}
@@ -41,7 +39,7 @@ const FirstYearCollegeBarriers = (props: any) => {
             maxValue={1}
             // labelSkipWidth={12}
             // labelSkipHeight={12}
-            enableLabel={false}
+            enableLabel={true}
             // labelTextColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
             isInteractive={true}
             legends={[
@@ -49,14 +47,12 @@ const FirstYearCollegeBarriers = (props: any) => {
                     dataFrom: "keys",
                     anchor: "bottom-right",
                     direction: "column",
-                    justify: false,
                     translateX: 250,
                     itemWidth: 200,
                     itemHeight: 20
                 }
             ]}
         />
-        </>
     );
 };
 
