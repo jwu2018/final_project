@@ -2,7 +2,7 @@ import { Bar, ResponsiveBar } from "@nivo/bar";
 import React, { useEffect, useState } from "react";
 
 const getSurveyData = async () => {
-    let res = await fetch('http://localhost:5000/getAnswers').then(res => res.json());
+    let res = await fetch('/getAnswers').then(res => res.json());
     return res;
 }
 

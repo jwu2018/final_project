@@ -2,8 +2,7 @@ require('dotenv').config()
 const express = require('express'),
     mongodb = require('mongodb'),
     app = express(),
-    cors = require('cors'),
-    dreams = [];
+    cors = require('cors')
 
 // automatically deliver all files in the public folder
 // with the correct headers / MIME type.
@@ -51,6 +50,7 @@ app.use((req, res, next) => {
     }
 })
 
+app.use(express.static('build'));
 
 /**--------------------------------------------
  *               EXPRESS ROUTES
@@ -100,16 +100,11 @@ app.post('/submit', async function(request, response) {
     // console.log('response', response)
     // debugger
     // console.log('submit', request.json)
-    console.log('submitting...')
-    console.log('body:', request.body);
     const data = request.body;
 
     const survey = data.survey;
     let existingQuestionData = await collection.findOne({ 'survey': survey });
-    console.log('existing data for this question:');
-    console.log(existingQuestionData);
     if (existingQuestionData === null) {
-        console.log('making a new document for this survey');
         let document = { survey, questions: {} };
         Object.keys(data).filter(key => key !== 'survey')
             .forEach(questionKey => {
@@ -121,7 +116,6 @@ app.post('/submit', async function(request, response) {
         console.log(document);
         collection.insertOne(document);
     } else {
-        console.log('need to update an existing document for this survey');
         let questions = existingQuestionData.questions;
         Object.keys(data).filter(key => key !== 'survey')
             .forEach(questionKey => {
@@ -129,10 +123,7 @@ app.post('/submit', async function(request, response) {
                 // let questionResponses = {question: questionKey, responses: [response]}
                 questions[questionKey][answer] = questions[questionKey][answer] ? questions[questionKey][answer] + 1 : 1;
             });
-        console.log('new questions object:');
-        console.log(questions);
         let res = await collection.updateOne({ survey }, { '$set': { 'questions': questions } });
-        console.log(res);
     }
     response.writeHead(200, { 'Content-Type': 'application/json' })
         // console.log('submit response', request.json )
