@@ -9,6 +9,8 @@ import Prevention from 'SurveySections/Prevention';
 import PreventionUserVis from 'SurveySections/PreventionUserVis';
 import Treatment from 'SurveySections/Treatment';
 import PreventionVizzes from 'visualizations/PreventionVizzes';
+import PHQ9 from 'SurveySections/PHQ9';
+import PHQ9Vis from 'SurveySections/PHQ9Vis';
 
 
 const Questions = (props: any) => {
@@ -16,15 +18,17 @@ const Questions = (props: any) => {
     const [data, setData] = useState({});
 
     const pageArray = [
-        <Prevelance data={data} dataCallback={setData} />,
-        <PrevelanceVis data={data} />,
-        <Factors data={data} dataCallback={setData} />,
-        <FactorsVis data={data} />,
-        <Treatment data={data} dataCallback={setData} />,
-        <TreatmentVis data={data} />,
-        <PreventionVizzes />,
-        <Prevention data={data} dataCallback={setData} />,
-        <PreventionUserVis data={data} />
+        { page: <Prevelance data={data} dataCallback={setData} />, type: "survey" },
+        { page: <PrevelanceVis data={data} />, type: "vis" },
+        { page: <PHQ9 data={data} dataCallback={setData} />, type: "survey" },
+        { page: <PHQ9Vis data={data} />, type: "vis" },
+        { page: <Factors data={data} dataCallback={setData} />, type: "survey" },
+        { page: <FactorsVis data={data} />, type: "vis" },
+        { page: <Treatment data={data} dataCallback={setData} />, type: "survey" },
+        { page: <TreatmentVis data={data} />, type: "vis" },
+        { page: <PreventionVizzes />, type: "vis" },
+        { page: <Prevention data={data} dataCallback={setData} />, type: "survey" },
+        { page: <PreventionUserVis data={data} />, type: "vis" }
     ]
 
     const { nextCallback } = props;
@@ -32,9 +36,10 @@ const Questions = (props: any) => {
         console.log("data is:");
 
         console.log(data);
-        // if (page % 2 === 1) {
-        //     setData({});
-        // }
+        if (pageArray[page + 1].type === 'survey') {
+            // TODO - send data to mongo
+            setData({});
+        }
         if (page === pageArray.length - 1) {
             nextCallback();
         }
@@ -45,7 +50,7 @@ const Questions = (props: any) => {
     }
 
     const getPage = (pageNum: number) => {
-        return pageArray[pageNum];
+        return pageArray[pageNum].page;
     }
 
     return (
