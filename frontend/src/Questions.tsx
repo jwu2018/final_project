@@ -13,21 +13,29 @@ import PHQ9 from 'SurveySections/PHQ9';
 import PHQ9Vis from 'SurveySections/PHQ9Vis';
 
 
+const sendToAnswersApi = (data: object) => {
+    fetch('http://localhost:5000/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    }).then(res => res.json()).then(json => console.log(json)
+    );
+}
 const Questions = (props: any) => {
     const [page, setPage] = useState(0);
     const [data, setData] = useState({});
 
     const pageArray = [
-        { page: <Prevelance data={data} dataCallback={setData} />, type: "survey" },
+        { page: <Prevelance data={data} dataCallback={setData} />, type: "survey", name: "prevelance" },
         { page: <PrevelanceVis data={data} />, type: "vis" },
-        { page: <PHQ9 data={data} dataCallback={setData} />, type: "survey" },
+        { page: <PHQ9 data={data} dataCallback={setData} />, type: "survey", name: "phq9" },
         { page: <PHQ9Vis data={data} />, type: "vis" },
-        { page: <Factors data={data} dataCallback={setData} />, type: "survey" },
+        { page: <Factors data={data} dataCallback={setData} />, type: "survey", name: "factors" },
         { page: <FactorsVis data={data} />, type: "vis" },
-        { page: <Treatment data={data} dataCallback={setData} />, type: "survey" },
+        { page: <Treatment data={data} dataCallback={setData} />, type: "survey", name: "treatment" },
         { page: <TreatmentVis data={data} />, type: "vis" },
         { page: <PreventionVizzes />, type: "vis" },
-        { page: <Prevention data={data} dataCallback={setData} />, type: "survey" },
+        { page: <Prevention data={data} dataCallback={setData} />, type: "survey", name: "prevention" },
         { page: <PreventionUserVis data={data} />, type: "vis" }
     ]
 
@@ -36,8 +44,12 @@ const Questions = (props: any) => {
         console.log("data is:");
 
         console.log(data);
+        if (pageArray[page].type === 'survey') {
+            // if next was clicked on a survey page
+            sendToAnswersApi({ survey: pageArray[page].name, ...data });
+
+        }
         if (pageArray[page + 1].type === 'survey') {
-            // TODO - send data to mongo
             setData({});
         }
         if (page === pageArray.length - 1) {

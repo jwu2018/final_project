@@ -18,7 +18,7 @@ const FactorsVis = (props: any) => {
         <>
             <h2>Factors Affecting Mental Health</h2>
             <p>
-                There are many factors that affect mental health. These range from genetic to geographical.
+                There are many factors that affect mental health and suicide. These can range from genetic to geographical.
                 Here we will talk about and show data for just a few factors. Some of these are behaviors which can be changed, and some are intrinsic to a person.
                 It is important to note that none of this data is from studies that are capable of demostrating a causative relationship.
             </p>
