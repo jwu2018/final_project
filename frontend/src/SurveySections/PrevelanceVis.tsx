@@ -8,7 +8,9 @@ const PrevelanceVis = (props: any) => {
     const data = props.data;
 
     const country = data.country;
+
     const state = data.state;
+    const shouldShowUSData = state || country === "United States of America";
 
     const keys = Object.keys(data);
     return (
@@ -23,7 +25,7 @@ const PrevelanceVis = (props: any) => {
             </div>
 
 
-            <div hidden={!state}>
+            <div hidden={!shouldShowUSData}>
                 <h2>Prevelance of Mental Illness in the United States</h2>
                 <div style={{ "height": "600px", "width": "1000px" }}>
                     <USMentalIllness />
