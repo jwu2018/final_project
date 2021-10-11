@@ -3,7 +3,9 @@ import ExampleVis from 'SurveySections/ExampleVis';
 import Factors from 'SurveySections/Factors';
 import Prevelance from 'SurveySections/Prevelance';
 import Prevention from 'SurveySections/Prevention';
+import PreventionUserVis from 'SurveySections/PreventionUserVis';
 import Treatment from 'SurveySections/Treatment';
+import PreventionVizzes from 'visualizations/PreventionVizzes';
 
 
 const Questions = () => {
@@ -11,14 +13,15 @@ const Questions = () => {
     const [data, setData] = useState({});
 
     const pageArray = [
-        <Prevelance data={data} dataCallback={setData} />,
-        <ExampleVis data={data} />,
-        <Factors data={data} dataCallback={setData} />,
-        <ExampleVis data={data} />,
-        <Treatment data={data} dataCallback={setData} />,
-        <ExampleVis data={data} />,
+        // <Prevelance data={data} dataCallback={setData} />,
+        // <ExampleVis data={data} />,
+        // <Factors data={data} dataCallback={setData} />,
+        // <ExampleVis data={data} />,
+        // <Treatment data={data} dataCallback={setData} />,
+        // <ExampleVis data={data} />,
+        <PreventionVizzes/>,
         <Prevention data={data} dataCallback={setData} />,
-        <ExampleVis data={data} />,
+        <PreventionUserVis data={data}/>
     ]
     const next = () => {
         console.log("data is:");
