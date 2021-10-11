@@ -27,7 +27,7 @@ const FirstYearCollegeBarriers = (props: any) => {
                 tickRotation: 0,
                 legend: 'Reason',
                 legendPosition: 'middle',
-                legendOffset: 50,
+                legendOffset: 40,
             }}
             axisLeft={{
                 tickSize: 5,
@@ -52,7 +52,7 @@ const FirstYearCollegeBarriers = (props: any) => {
                     justify: false,
                     translateX: 250,
                     itemWidth: 200,
-                    itemHeight: 50
+                    itemHeight: 20
                 }
             ]}
         />

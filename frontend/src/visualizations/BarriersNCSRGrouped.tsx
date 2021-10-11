@@ -10,7 +10,7 @@ const BarriersNCSRGrouped = (props: any) => {
             keys={['mild', 'moderate', 'severe']}
             indexBy="reason"
             groupMode="grouped"
-            margin={{ top: 10, right: 100, bottom: 100, left: 100 }}
+            margin={{ top: 10, right: 250, bottom: 150, left: 100 }}
             padding={0.3}
             // valueScale={{ type: 'linear' }}
             // indexScale={{ type: 'band', round: true }}
@@ -23,20 +23,31 @@ const BarriersNCSRGrouped = (props: any) => {
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                // legend: 'Diagnosis',
+                legend: 'Reason',
                 legendPosition: 'middle',
-                legendOffset: 32
+                legendOffset: 40
             }}
             axisLeft={{
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                // legend: 'Percentage',
+                legend: 'Percentage',
                 legendPosition: 'middle',
-                legendOffset: -50,
+                legendOffset: -70,
                 format: '.1%'
             }}
             maxValue={1}
+            legends={[
+                {
+                    dataFrom: "keys",
+                    anchor: "bottom-right",
+                    direction: "column",
+                    justify: false,
+                    translateX: 250,
+                    itemWidth: 200,
+                    itemHeight: 20
+                }
+            ]}
             // labelSkipWidth={12}
             // labelSkipHeight={12}
             enableLabel={false}
