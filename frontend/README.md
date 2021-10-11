@@ -40,7 +40,7 @@ If you update the backend, you will have to stop the server and rerun it. This i
 
 ## Challenges Faced
 - Most of the team had never used React, Typescript, Yarn, or Nivo before. It took some time to get used to the new technologies but once we got over the learning curve, they were pretty straightforward to use.
-- This project was a race against time. All of us were very busy during finals week and our collective time management skills could have been a lot better. Even so, we are pretty satisfied with the results.
+- This project was a race against time. All of us were very busy during finals week and our time management was affected as a result. Even so, we are pretty satisfied with the results.
 
 ## Group Member Contributions
 ### Alan Healy
