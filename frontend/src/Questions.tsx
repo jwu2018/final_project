@@ -13,13 +13,12 @@ const Questions = () => {
     const [data, setData] = useState({});
 
     const pageArray = [
-        // <Prevelance data={data} dataCallback={setData} />,
-        // <ExampleVis data={data} />,
-        // <Factors data={data} dataCallback={setData} />,
-        // <ExampleVis data={data} />,
-        // <Treatment data={data} dataCallback={setData} />,
-        // <ExampleVis data={data} />,
-        <PreventionVizzes/>,
+        <Prevelance data={data} dataCallback={setData} />,
+        <ExampleVis data={data} />,
+        <Factors data={data} dataCallback={setData} />,
+        <ExampleVis data={data} />,
+        <Treatment data={data} dataCallback={setData} />,
+        <ExampleVis data={data} />,
         <Prevention data={data} dataCallback={setData} />,
         <PreventionUserVis data={data}/>
     ]
