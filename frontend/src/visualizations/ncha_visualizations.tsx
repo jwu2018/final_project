@@ -46,9 +46,27 @@ const NCHAVisualizations = (props: any) => {
                 <br />
                 <NCHASelfHarm />
                 <br />
-                <p>Source:</p>
+                <p>
+                    From this data, it's clear that many college students struggle with mental health issues; in 2019,
+                    87% of surveyed college students said they felt overwhelmed by all they had to do in the past year. Additionally,
+                    66% said they felt overwhelming anxiety, and 13% had seriously considered suicide. Colleges need to
+                    find ways to address these issues to improve student mental health.
+                </p>
+                <p>
+                    Professor Marty Becker from Florida State University and the American Psychological Association states
+                    that there are 4 primary strategies colleges should use to improve student mental health. First, colleges
+                    should empower students to learn more about their mental health, and provide training for skills such as
+                    mindfulness and time management. Second, colleges should provide stress-management resources to students, such
+                    as coaches, advisors, and counselors, as well as a platform for peer-to-peer support groups. Next, colleges
+                    should study which factors contribute most highly to stress - such as discrimination, substance use, and
+                    pressure from classes - and work to reduce their impact. Finally, colleges should launch wellness campaigns
+                    to train students and faculty to recognize when others are in distress and to intervene when possible.
+                </p>
+                <p>Sources:</p>
                 <p><a href="https://www.acha.org/documents/ncha/NCHA-II_SPRING_2019_US_REFERENCE_GROUP_EXECUTIVE_SUMMARY.pdf">
                     American College Health Association || National College Health Assessment</a></p>
+                <p><a href="https://theconversation.com/the-mental-health-crisis-on-campus-and-how-colleges-can-fix-it-127875">
+                    The Conversation || The mental health crisis on campus and how colleges can fix it</a></p>
             </div>
         </>
     )
