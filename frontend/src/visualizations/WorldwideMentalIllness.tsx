@@ -18,65 +18,43 @@ const WorldwideMentalIllness = (props: any) => {
     console.log(data);
 
     return (
-        <ResponsiveBar
-            data={data}
-            keys={['rate']}
-            indexBy="disorder"
-            margin={{ top: 50, right: 130, bottom: 80, left: 60 }}
-            padding={0.3}
-            // valueScale={{ type: 'linear' }}
-            // indexScale={{ type: 'band', round: true }}
-            valueFormat='.2%'
-            colors={{ scheme: 'nivo' }}
-            borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
-            axisTop={null}
-            axisRight={null}
-            axisBottom={{
-                tickSize: 5,
-                tickPadding: 5,
-                tickRotation: 0,
-                // legend: 'Disorder',
-                legendPosition: 'middle',
-                legendOffset: 32
-            }}
-            axisLeft={{
-                tickSize: 5,
-                tickPadding: 5,
-                tickRotation: 0,
-                legend: 'Worldwide Rate',
-                legendPosition: 'middle',
-                legendOffset: -50,
-                format: '.1%'
-            }}
-            labelSkipWidth={12}
-            labelSkipHeight={12}
-            // labelTextColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
-            isInteractive={true}
-        // legends={[
-        //     {
-        //         dataFrom: 'keys',
-        //         anchor: 'bottom-right',
-        //         direction: 'column',
-        //         justify: false,
-        //         translateX: 120,
-        //         translateY: 0,
-        //         itemsSpacing: 2,
-        //         itemWidth: 100,
-        //         itemHeight: 20,
-        //         itemDirection: 'left-to-right',
-        //         itemOpacity: 0.85,
-        //         symbolSize: 20,
-        //         effects: [
-        //             {
-        //                 on: 'hover',
-        //                 style: {
-        //                     itemOpacity: 1
-        //                 }
-        //             }
-        //         ]
-        //     }
-        // ]}
-        />
+        <div>
+            <div style={{ "height": "400px", "width": "1000px" }}>
+                <ResponsiveBar
+                    data={data}
+                    keys={['rate']}
+                    indexBy="disorder"
+                    margin={{ top: 50, right: 130, bottom: 40, left: 60 }}
+                    padding={0.3}
+                    valueFormat='.2%'
+                    colors={{ scheme: 'nivo' }}
+                    borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+                    axisTop={null}
+                    axisRight={null}
+                    axisBottom={{
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: 0,
+                        legendPosition: 'middle',
+                        legendOffset: 32
+                    }}
+                    axisLeft={{
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: 0,
+                        legend: 'Worldwide Rate',
+                        legendPosition: 'middle',
+                        legendOffset: -50,
+                        format: '.1%'
+                    }}
+                    labelSkipWidth={12}
+                    labelSkipHeight={12}
+                    isInteractive={true}
+                />
+
+            </div>
+            <div>Data from <a href="https://ourworldindata.org/mental-health">Our World In Data</a></div>
+        </div>
     );
 }
 

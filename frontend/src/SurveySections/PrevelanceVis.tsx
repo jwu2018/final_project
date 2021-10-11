@@ -16,17 +16,17 @@ const PrevelanceVis = (props: any) => {
     return (
         <>
             <h2>Prevelance of Mental Illnesses Worldwide</h2>
-            <div style={{ "height": "600px", "width": "1000px" }}>
+            <div style={{ "width": "1000px" }}>
                 <WorldwideMentalIllness />
             </div>
-            <h2>Prevelance of Suicide Worldwide</h2>
-            <div style={{ "height": "600px", "width": "100%" }}>
-                <WorldwideSuicide />
+            <h2>Prevelance of Suicide Worldwide (age-standardized, per 100,000 population)</h2>
+            <div style={{ "width": "100%" }}>
+                <WorldwideSuicide country={country} />
             </div>
 
 
             <div hidden={!shouldShowUSData}>
-                <h2>Prevelance of Mental Illness in the United States</h2>
+                <h2>Prevelance of Mental Illness in the United States </h2>
                 <div style={{ "height": "600px", "width": "1000px" }}>
                     <USMentalIllness />
                 </div>

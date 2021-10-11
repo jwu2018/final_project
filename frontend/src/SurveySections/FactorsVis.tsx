@@ -4,7 +4,7 @@ import USMentalIllness from "visualizations/USMentalIllness";
 import WorldwideMentalIllness from "visualizations/WorldwideMentalIllness";
 import WorldwideSuicide from "visualizations/WorldwideSuicide";
 
-const PrevelanceVis = (props: any) => {
+const FactorsVis = (props: any) => {
     const data = props.data;
 
     const exercise = data.exercise;
@@ -20,4 +20,4 @@ const PrevelanceVis = (props: any) => {
     )
 }
 
-export default PrevelanceVis;
+export default FactorsVis;

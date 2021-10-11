@@ -1,4 +1,5 @@
 import { ResponsiveBar } from '@nivo/bar';
+import { CartesianMarkerProps } from '@nivo/core';
 import { ResponsiveChoropleth } from '@nivo/geo';
 import WORLD_MAP from '../data/geo/custom.geo.json';
 import WORLDWIDE_SUICIDE, { keys as worldwide_keys } from '../data/prevelance/worldwide_suicide';
@@ -15,10 +16,24 @@ const WorldwideSuicide = (props: any) => {
         })
         .sort((a, b) => (b.rate - a.rate));
     console.log(data);
+    const highlightCountry = props.country;
+
+    let markers: CartesianMarkerProps[] = [];
+    if (highlightCountry) {
+        const entry = data.find(c => c.Country === highlightCountry)
+        const highlightCountryRate = entry ? entry.rate : 0;
+        markers.push({
+            axis: 'y',
+            value: highlightCountryRate,
+            lineStyle: { stroke: 'rgba(0, 0, 0, .35)', strokeWidth: 2 },
+            legend: highlightCountry,
+            legendOrientation: 'horizontal',
+        });
+    }
 
     return (
-        <div style={{ width: "100%", height: "100%" }}>
-            <div style={{ width: "100%", height: "50%" }}>
+        <div style={{ width: "100%" }}>
+            <div style={{ width: "100%", height: "600px" }}>
                 <ResponsiveChoropleth
                     data={data}
                     value="rate"
@@ -39,6 +54,7 @@ const WorldwideSuicide = (props: any) => {
                         || a.properties.formal_en === b.Country
                         || a.properties.name_long === b.Country
                         || a.properties.name === b.Country}
+
                     legends={
                         [
                             {
@@ -67,12 +83,12 @@ const WorldwideSuicide = (props: any) => {
                         ]}
                 />
             </div>
-            <div style={{ width: "100%", height: "50%" }}>
+            <div style={{ width: "100%", height: "400px" }}>
                 <ResponsiveBar
                     data={data}
                     keys={['rate']}
                     indexBy="Country"
-                    margin={{ top: 50, right: 20, bottom: 80, left: 60 }}
+                    margin={{ top: 50, right: 20, bottom: 10, left: 60 }}
                     padding={0.2}
                     // valueScale={{ type: 'linear' }}
                     // indexScale={{ type: 'band', round: true }}
@@ -82,14 +98,6 @@ const WorldwideSuicide = (props: any) => {
                     axisTop={null}
                     axisRight={null}
                     axisBottom={null}
-                    // axisBottom={{
-                    //     tickSize: 5,
-                    //     tickPadding: 5,
-                    //     tickRotation: 90,
-                    //     // legend: 'Disorder',
-                    //     legendPosition: 'middle',
-                    //     legendOffset: 32
-                    // }}
                     axisLeft={{
                         tickSize: 5,
                         tickPadding: 5,
@@ -101,10 +109,12 @@ const WorldwideSuicide = (props: any) => {
                     }}
                     labelSkipWidth={12}
                     labelSkipHeight={12}
+                    markers={markers}
                     // labelTextColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
                     isInteractive={true}
                 />
             </div>
+            <div>Data from the <a href="https://apps.who.int/gho/data/node.main.MHSUICIDEASDR?lang=en">World Health Organization</a></div>
         </div>
     );
 }
