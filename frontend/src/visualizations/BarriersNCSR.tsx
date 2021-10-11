@@ -1,6 +1,8 @@
 import { ResponsiveBar } from "@nivo/bar";
 import barriers from "data/treatment-barriers/barriers_ncs-r";
 
+barriers.sort((b,a) => (a.mild+a.moderate+a.severe) - (b.mild+b.moderate+b.severe));
+
 const BarriersNCSR = (props: any) => {
     return (
         <ResponsiveBar

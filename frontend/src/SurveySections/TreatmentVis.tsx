@@ -22,26 +22,27 @@ const TreatmentVis = (props: any) => {
             "You anticipate problems with time, transportation, or scheduling.": {data["time"]}<br />
             "You are afraid it might harm your school or professional career": {data["harm"]}</p>
 
+            <p>Below is data collected from a survey of first-year college students asked about the same barriers to treatment:</p>
             <h3>Importance of Barriers to Treatment to First-Year College Students</h3>
             <div style={{ "height": "600px", "width": "100%" }}>
                 <FirstYearCollegeBarriers />
             </div>
-            <p style={{fontSize: "small", zIndex: 100}}>Questions and data acquired from&nbsp;
-            <a href="https://onlinelibrary.wiley.com/doi/10.1002/mpr.1782" style={{zIndex: 100}}><em>Barriers
+            <p style={{fontSize: "small"}}>Questions and data acquired from&nbsp;
+            <a href="https://onlinelibrary.wiley.com/doi/10.1002/mpr.1782"><em>Barriers
                 of mental health treatment utilization among first-year college students: First
                 cross-national results from the WHO World Mental Health International College Student
                 Initiative</em></a></p>
+            
+            <p>Below is data from another survey which shows reported barriers to treatment by severity of common mental disorder:</p>
             
             <h3>NCS-R: Reasons for Not Seeking Treatment</h3>
             <div style={{ "height": "600px", "width": "100%" }}>
                 <BarriersNCSR />
             </div>
-            
-            <h3>NCS-R: Reasons for Not Seeking Treatment, Grouped</h3>
-            <div style={{ "height": "600px", "width": "100%" }}>
-                <BarriersNCSRGrouped />
-            </div>
-            
+            <p style={{fontSize: "small"}}>Data acquired from&nbsp;
+            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3128692/"><em>Barriers to
+                Mental Health Treatment: Results from the National Comorbidity Survey Replication
+                (NCS-R)</em></a></p>
         </>
     )
 }
