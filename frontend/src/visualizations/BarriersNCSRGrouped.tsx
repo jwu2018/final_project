@@ -3,12 +3,14 @@ import barriers from "data/treatment-barriers/barriers_ncs-r_grouped";
 
 const BarriersNCSRGrouped = (props: any) => {
     return (
+        <>
+        <h3>NCS-R: Reasons for Not Seeking Treatment, Grouped</h3>
         <ResponsiveBar
             data={barriers}
             keys={['mild', 'moderate', 'severe']}
             indexBy="reason"
             groupMode="grouped"
-            margin={{ top: 100, right: 100, bottom: 100, left: 100 }}
+            margin={{ top: 10, right: 100, bottom: 100, left: 100 }}
             padding={0.3}
             // valueScale={{ type: 'linear' }}
             // indexScale={{ type: 'band', round: true }}
@@ -40,7 +42,8 @@ const BarriersNCSRGrouped = (props: any) => {
             enableLabel={false}
             // labelTextColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
             isInteractive={true}
-        />
+        />\
+        </>
     );
 };
 

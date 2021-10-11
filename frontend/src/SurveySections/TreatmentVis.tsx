@@ -12,14 +12,15 @@ const TreatmentVis = (props: any) => {
                 return <div>{key}: {data[key]}</div>
             })}
             <div style={{ "height": "600px", "width": "100%" }}>
+                <FirstYearCollegeBarriers />
+            </div>
+            <div style={{ "height": "600px", "width": "100%" }}>
                 <BarriersNCSR />
             </div>
             <div style={{ "height": "600px", "width": "100%" }}>
                 <BarriersNCSRGrouped />
             </div>
-            <div style={{ "height": "600px", "width": "100%" }}>
-                <FirstYearCollegeBarriers />
-            </div>
+            
         </>
     )
 }

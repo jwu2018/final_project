@@ -1,4 +1,4 @@
-// https://onlinelibrary.wiley.com/doi/10.1002/mpr.1782
+// https://doi.org/10.1002/mpr.1782
 export default [
     {
         "barrier": "You are not sure available treatments are very effective",
