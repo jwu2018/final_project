@@ -16,7 +16,13 @@ const PreventionVizzes = (props: any) => {
             })} */}
 
             <div>
-                <h4>Suicide Prevention Methods</h4>
+                <h2>Suicide Prevention Methods</h2>
+                <p>
+                    There is no one right solution that works in preventing all suicides. Every individual that is contemplating
+                    suicide or suffering from mental illness is unique and the situation calls for different methods of preventation.
+                    These methods range from providing 24/7 hotlines to criminalizing suicide. Here we show data for some of the
+                    ways different countries are addressing suicide, if at all.
+                </p>
                 <ActionPlansByCountryBar />
                 <br />
                 <SuicideHotlinesChoropleth />
@@ -38,7 +44,8 @@ const PreventionVizzes = (props: any) => {
 const SuicideHotlinesChoropleth = (props: any) => {
     return (
         <div>
-            <h6>36 countries have national suicide hotlines</h6>
+            <h4>Countries with National Suicide Hotlines</h4>
+            <p>There are 36 countries with national suicide hotlines.</p>
             <div style={{ "height": "500px", "width": "900px" }}>
                 <ResponsiveChoropleth
                     data={suicide_hotlines_data}
@@ -70,7 +77,11 @@ const SuicideHotlinesChoropleth = (props: any) => {
 const ActionPlansByCountryBar = (props: any) => {
     return (
         <div>
-            <h6>28 countries have existing national strategy or action suicide prevention plans, 13 countries are developing plans.</h6>
+            <h4>Countries With Existing or Developing National Strategy/Action Suicide Prevention Plans</h4>
+            <p>A total of 28 countries have existing plans and 13 countries are developing plans. 
+                One thing to note, however, is that only 90 countries responded to this survey and results 
+                from each region ccan't be generalized to each country within the region.
+            </p>
             <div style={{ "height": "500px", "width": "900px" }}>
                 <ResponsiveBar
                     data={action_plans_data}
@@ -145,7 +156,10 @@ const ActionPlansByCountryBar = (props: any) => {
 const SuicideLawsChoropleth = (props: any) => {
     return (
         <div>
-            <h6>22 countries criminalize suicide</h6>
+            <h4>Countries That Criminalize Suicide</h4>
+            <p>Based on the dataset, 22 countries criminalize suicide but there are many countries that
+                do not have data.
+            </p>
             <div style={{ "height": "500px", "width": "900px" }}>
                 <ResponsiveChoropleth
                     data={suicide_laws_data}
