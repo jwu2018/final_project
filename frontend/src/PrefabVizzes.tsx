@@ -7,7 +7,7 @@ import WorldwideMentalIllness from 'visualizations/WorldwideMentalIllness';
 import WorldwideSuicide from 'visualizations/WorldwideSuicide';
 import FactorsVizzes from 'visualizations/FactorsVizzes';
 import PrevelanceVizzes from 'visualizations/PrevelanceVIzzes';
-import NCHAAttemptedSuicide from 'visualizations/ncha_attempted_suicide';
+import NCHAVisualizations from 'visualizations/ncha_visualizations';
 
 
 const PrefabVizzes = (props: any) => {
@@ -22,10 +22,10 @@ const PrefabVizzes = (props: any) => {
         // <WorldwideSuicide/>,
 
         // todo this one we can keep
-        <NCHAAttemptedSuicide />,
         <PrevelanceVizzes />,
         <FactorsVizzes />,
-        <PreventionVizzes />
+        <PreventionVizzes />,
+        <NCHAVisualizations />,
     ]
 
     const { nextCallback } = props;

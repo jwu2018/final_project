@@ -52,3 +52,5 @@ const NCHAVisualizations = (props: any) => {
         </>
     )
 }
+
+export default NCHAVisualizations;
