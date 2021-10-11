@@ -14,11 +14,11 @@ const Prevention = (props: any) => {
             <form>
                 <p>Are you willing to help prevent suicides in your community?</p>
                 <div className="container">
-                    <div className="six columns">
+                    <div className="two columns">
                         <input type="radio" id="willing_yes" name="willing" value="Yes" onChange={onValueSelected} />
                         <label htmlFor="willing_yes">Yes</label><br />
                     </div>
-                    <div className="six columns">
+                    <div className="two columns">
                         <input type="radio" id="willing_no" name="willing" value="No" onChange={onValueSelected} />
                         <label htmlFor="willing_no">No</label>
                     </div>
@@ -26,15 +26,15 @@ const Prevention = (props: any) => {
 
                 <p>Do you have your country’s suicide hotline saved on your phone? (if applicable)</p>
                 <div className="container">
-                    <div className="four columns">
+                    <div className="two columns">
                         <input type="radio" id="number_yes" name="number" value="Yes" onChange={onValueSelected} />
                         <label htmlFor="number_yes">Yes</label><br />
                     </div>
-                    <div className="four columns">
+                    <div className="two columns">
                         <input type="radio" id="number_no" name="number" value="No" onChange={onValueSelected} />
                         <label htmlFor="number_no">No</label><br />
                     </div>
-                    <div className="four columns">
+                    <div className="two columns">
                         <input type="radio" id="number_na" name="number" value="Not Applicable" onChange={onValueSelected} />
                         <label htmlFor="number_na">Not Applicable</label>
                     </div>
@@ -42,7 +42,7 @@ const Prevention = (props: any) => {
 
                 <p>How often are you engaged with your community?</p>
                 <div className="row container">
-                    <div className="three columns">
+                    <div className="two columns">
                         <input type="radio" id="engaged_always" name="engaged" value="Always" onChange={onValueSelected} />
                         <label htmlFor="engaged_always">Always</label><br />
                     </div>
@@ -58,7 +58,7 @@ const Prevention = (props: any) => {
                         <input type="radio" id="engaged_rarely" name="engaged" value="Rarely" onChange={onValueSelected} />
                         <label htmlFor="engaged_rarely">Rarely</label><br />
                     </div>
-                    <div className="three columns">
+                    <div className="two columns">
                         <input type="radio" id="engaged_never" name="engaged" value="Never" onChange={onValueSelected} />
                         <label htmlFor="engaged_never">Never</label>
                     </div>
@@ -66,15 +66,15 @@ const Prevention = (props: any) => {
 
                 <p>Does your community/country have a suicide prevention plan?</p>
                 <div className="row container">
-                    <div className="four columns">
+                    <div className="two columns">
                         <input type="radio" id="plan_yes" name="plan" value="Yes" onChange={onValueSelected} />
                         <label htmlFor="plan_yes">Yes</label><br />
                     </div>
-                    <div className="four columns">
+                    <div className="two columns">
                         <input type="radio" id="plan_maybe" name="plan" value="Maybe" onChange={onValueSelected} />
                         <label htmlFor="plan_maybe">Maybe</label><br />
                     </div>
-                    <div className="four columns">
+                    <div className="two columns">
                         <input type="radio" id="plan_no" name="plan" value="No" onChange={onValueSelected} />
                         <label htmlFor="plan_no">No</label>
                     </div>
