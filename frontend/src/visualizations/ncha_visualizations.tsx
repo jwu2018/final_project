@@ -18,6 +18,7 @@ const NCHAVisualizations = (props: any) => {
                     Student Responses to National College Health Assessment
                 </h2>
                 <p>
+                    Mental health issues can be especially prevalent in the stressful environment of college.
                     In 2019, the American College Health Association conducted a survey of approximately 70,000 college
                     students across the United States. As part of this survey, students were asked to state whether they
                     had felt or done certain things in the last 2 weeks, last 30 days, last 12 months, prior to the last
