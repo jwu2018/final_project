@@ -3,6 +3,7 @@ import './App.css';
 import './skeleton/skeleton.css'
 import Questions from 'Questions';
 import PrefabVizzes from 'PrefabVizzes';
+import SurveyResponses from 'SurveyResponses';
 function App() {
   const [section, setSection] = useState(0);
 
@@ -15,7 +16,8 @@ function App() {
     <Welcome />,
     <PrefabVizzes />,
     <Questions nextCallback={next} />,
-    <Thanks />
+    <Thanks />,
+    <SurveyResponses />,
   ]
 
 

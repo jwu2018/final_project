@@ -79,33 +79,9 @@ app.get('/getAnswers', function(req, res) {
     }
 })
 
-// app.post('/submit', function(request, response) {
-//     dreams.push(request.body.newdream);
-//     response.writeHead(200, { 'Content-Type': 'application/json' });
-//     response.end(JSON.stringify(dreams));
-// })
-
-// app.use('/submit', function(request, response, next) {
-//     console.log('submitting...')
-//     let dataString = ''
-
-//     request.on('data', function(data) {
-//         dataString += data
-//     })
-
-//     request.on('end', function() {
-//         console.log(json)
-
-//         // history.push( json )
-//         // debugger
-//         collection.insertOne(json) //.then( result => response.json( result ) )
-//             // add a 'json' field to our request object
-//         request.json = JSON.stringify(json)
-//         next()
-//     })
-// })
-
 app.use(express.json());
+
+// JUST FOR TESTING
 app.post('/clearSurvey', async function(request, response) {
     const data = request.body;
 

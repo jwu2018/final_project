@@ -5,6 +5,8 @@ import SuicideByStateChloropleth from 'visualizations/SuicideByState';
 import USMentalIllness from 'visualizations/USMentalIllness';
 import WorldwideMentalIllness from 'visualizations/WorldwideMentalIllness';
 import WorldwideSuicide from 'visualizations/WorldwideSuicide';
+import FactorsVizzes from 'visualizations/FactorsVizzes';
+import PrevelanceVizzes from 'visualizations/PrevelanceVIzzes';
 
 
 const PrefabVizzes = () => {
@@ -19,6 +21,8 @@ const PrefabVizzes = () => {
         // <WorldwideSuicide/>,
 
         // todo this one we can keep
+        <PrevelanceVizzes />,
+        <FactorsVizzes />,
         <PreventionVizzes />
     ]
     const next = () => {
