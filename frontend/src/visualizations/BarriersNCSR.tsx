@@ -1,7 +1,7 @@
 import { ResponsiveBar } from "@nivo/bar";
 import barriers from "data/treatment-barriers/barriers_ncs-r";
 
-barriers.sort((b,a) => (a.mild+a.moderate+a.severe) - (b.mild+b.moderate+b.severe));
+barriers.sort((a,b) => (a.mild+a.moderate+a.severe) - (b.mild+b.moderate+b.severe));
 
 const BarriersNCSR = (props: any) => {
     return (
@@ -10,7 +10,8 @@ const BarriersNCSR = (props: any) => {
             keys={['mild', 'moderate', 'severe']}
             indexBy="reason"
             groupMode="grouped"
-            margin={{ top: 10, right: 250, bottom: 60, left: 100 }}
+            layout="horizontal"
+            margin={{ top: 10, right: 250, bottom: 60, left: 250 }}
             padding={0.3}
             // valueScale={{ type: 'linear' }}
             // indexScale={{ type: 'band', round: true }}
@@ -19,21 +20,21 @@ const BarriersNCSR = (props: any) => {
             borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
             axisTop={null}
             axisRight={null}
-            axisBottom={{
+            axisLeft={{
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
                 legend: 'Reason',
                 legendPosition: 'middle',
-                legendOffset: 40
+                legendOffset: -200
             }}
-            axisLeft={{
+            axisBottom={{
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
                 legend: 'Percentage',
                 legendPosition: 'middle',
-                legendOffset: -70,
+                legendOffset: 40,
                 format: '.1%'
             }}
             maxValue={0.8}
