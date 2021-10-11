@@ -27,7 +27,7 @@ const TreatmentVis = (props: any) => {
             <div style={{ "height": "600px", "width": "100%" }}>
                 <FirstYearCollegeBarriers />
             </div>
-            <p style={{fontSize: "small"}}>Questions and data acquired from&nbsp;
+            <p style={{fontSize: "small", marginTop: 15}}>Questions and data acquired from&nbsp;
             <a href="https://onlinelibrary.wiley.com/doi/10.1002/mpr.1782"><em>Barriers
                 of mental health treatment utilization among first-year college students: First
                 cross-national results from the WHO World Mental Health International College Student
@@ -39,7 +39,7 @@ const TreatmentVis = (props: any) => {
             <div style={{ "height": "600px", "width": "100%" }}>
                 <BarriersNCSR />
             </div>
-            <p style={{fontSize: "small"}}>Data acquired from&nbsp;
+            <p style={{fontSize: "small", marginTop: 15}}>Data acquired from&nbsp;
             <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3128692/"><em>Barriers to
                 Mental Health Treatment: Results from the National Comorbidity Survey Replication
                 (NCS-R)</em></a></p>
