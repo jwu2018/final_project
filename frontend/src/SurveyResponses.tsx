@@ -36,6 +36,19 @@ const SurveyResponses = () => {
     });
 
     let phq9Responses = phq9Data.questions;
+    let zeros: any = { id: '0' };
+    let ones: any = { id: '1' };
+    let twos: any = { id: '2' };
+    let threes: any = { id: '3' };
+    Object.keys(phq9Responses).forEach((question, index) => {
+        zeros[`question ${index + 1}`] = phq9Responses[question][0] ?? 0;
+        ones[`question ${index + 1}`] = phq9Responses[question][1] ?? 0;
+        twos[`question ${index + 1}`] = phq9Responses[question][2] ?? 0;
+        threes[`question ${index + 1}`] = phq9Responses[question][3] ?? 0;
+    })
+    let phq9ResponseData = [zeros, ones, twos, threes];
+    console.log(phq9ResponseData);
+
 
     return (
         <div className="section">
@@ -82,6 +95,41 @@ const SurveyResponses = () => {
                 keys={['value']}
                 indexBy="id"
                 colors={{ scheme: 'nivo' }}
+                borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+                axisTop={null}
+                axisRight={null}
+                axisBottom={{
+                    tickSize: 5,
+                    tickPadding: 5,
+                    tickRotation: 0,
+                    // legend: 'Disorder',
+                    legendPosition: 'middle',
+                    legendOffset: 32
+                }}
+                axisLeft={{
+                    tickSize: 5,
+                    tickPadding: 5,
+                    tickRotation: 0,
+                    legendPosition: 'middle',
+                    legendOffset: -50,
+                    // format: '.1%'
+                }}
+                // labelSkipWidth={12}
+                // labelSkipHeight={12}
+                enableLabel={false}
+                // labelTextColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+                isInteractive={true}
+            />
+            <h3>PHQ-9 Responses looked like</h3>
+            <Bar
+                width={800}
+                height={400}
+                data={phq9ResponseData}
+                margin={{ top: 50, right: 10, bottom: 80, left: 60 }}
+                keys={['question 1', 'question 2', 'question 3', 'question 4', 'question 5', 'question 6', 'question 7', 'question 8', 'question 9']}
+                indexBy="id"
+                colors={{ scheme: 'nivo' }}
+                groupMode="grouped"
                 borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
                 axisTop={null}
                 axisRight={null}
