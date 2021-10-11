@@ -19,7 +19,7 @@ const PrefabVizzes = () => {
         // <WorldwideSuicide/>,
 
         // todo this one we can keep
-        <PreventionVizzes/>
+        <PreventionVizzes />
     ]
     const next = () => {
         setPage(page + 1);
@@ -33,7 +33,7 @@ const PrefabVizzes = () => {
     }
 
     return (
-        <>
+        <div className="section">
             <h1>Visualizations</h1>
             <div>
                 {getPage(page)}
@@ -41,11 +41,11 @@ const PrefabVizzes = () => {
                 <button type="button" onClick={back}>
                     Back
                 </button>
-                <button type="button" onClick={next}>
+                <button className="u-pull-right" type="button" onClick={next}>
                     Next
                 </button>
             </div>
-        </>
+        </div>
     );
 }
 

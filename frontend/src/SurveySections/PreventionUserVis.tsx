@@ -7,21 +7,21 @@ import talking_public from '../data/prevention/talking_public';
 import think_prvntble from "data/prevention/think_prvntble";
 
 // const PreventionVisOg = (props: any) => {
-    // const data = props.data;
-    // const keys = Object.keys(data);
+// const data = props.data;
+// const keys = Object.keys(data);
 
-    // return (
-    //     // todo if user is willing, say that's great!
-    //     // todo if user is unwilling, say maybe reconsider
+// return (
+//     // todo if user is willing, say that's great!
+//     // todo if user is unwilling, say maybe reconsider
 
-    //     // todo comment this out after
-    //     <>
-    //         {keys.map(key => {
-    //             return <div>{key}: {data[key]}</div>
-    //         })}
-    //     </>
+//     // todo comment this out after
+//     <>
+//         {keys.map(key => {
+//             return <div>{key}: {data[key]}</div>
+//         })}
+//     </>
 
-    // )
+// )
 // }
 
 // const Message = (props: any) => {
@@ -39,12 +39,12 @@ import think_prvntble from "data/prevention/think_prvntble";
 
 //     )
 
-    
+
 // }
 
 
 
-const PreventionUserVis = ( props: any ) =>  {
+const PreventionUserVis = (props: any) => {
     const data = props.data;
     console.log('data', typeof data)
     const keys = Object.keys(data);
@@ -56,59 +56,59 @@ const PreventionUserVis = ( props: any ) =>  {
 
     // MESSAGE
 
-    switch(data[keys[0]]) { 
-        case "Yes": { 
+    switch (data[keys[0]]) {
+        case "Yes": {
             positiveCount++;
-            break; 
-        } 
-        case "No": { 
+            break;
+        }
+        case "No": {
             negativeCount++;
-            break; 
+            break;
         }
-    } 
-    switch(data[keys[1]]) { 
-        case "Yes": { 
+    }
+    switch (data[keys[1]]) {
+        case "Yes": {
             positiveCount++;
-            break; 
-        } 
-        case "No": { 
+            break;
+        }
+        case "No": {
             negativeCount++;
-            break; 
+            break;
         }
-    } 
-    switch(data[keys[2]]) { 
-        case "Always": { 
+    }
+    switch (data[keys[2]]) {
+        case "Always": {
             positiveCount++;
-            break; 
-        } 
-        case "Often": { 
-            positiveCount++;
-            break; 
+            break;
         }
-        case "Sometimes": { 
+        case "Often": {
             positiveCount++;
-            break; 
-        } 
-        case "Rarely": { 
+            break;
+        }
+        case "Sometimes": {
+            positiveCount++;
+            break;
+        }
+        case "Rarely": {
             negativeCount++;
-            break; 
+            break;
         }
-        case "Never": { 
+        case "Never": {
             negativeCount++;
-            break; 
+            break;
         }
-    } 
+    }
 
-    switch(data[keys[3]]) { 
-        case "Yes": { 
+    switch (data[keys[3]]) {
+        case "Yes": {
             positiveCount++;
-            break; 
-        } 
-        case "No": { 
-            negativeCount++;
-            break; 
+            break;
         }
-    } 
+        case "No": {
+            negativeCount++;
+            break;
+        }
+    }
 
     if (positiveCount >= negativeCount) {
         message = "That's great that you've expressed interest in advocating for suicide prevention!"
@@ -118,24 +118,20 @@ const PreventionUserVis = ( props: any ) =>  {
 
     return (
         <>
-            {/* {keys.map(key => {
-                return <div>{key}: {data[key]}</div>
-            })} */}
-
-        <div>
-            <h4>{message}</h4>
-            <ThinkPreventablePie/>
-            <InterestPie/>
-            <TalkingPublicPie/>
-            <p>Source:  
-                <a href="https://theactionalliance.org/resource/national-public-perception-mental-health-and-suicide-prevention-survey-results">
-                National Action Alliace for Suicide Prevention || National Public Perception of Mental Health and Suicide Prevention Survey Results</a></p>
-        </div>
+            <div>
+                <h4>{message}</h4>
+                <ThinkPreventablePie />
+                <InterestPie />
+                <TalkingPublicPie />
+                <p>Source:
+                    <a href="https://theactionalliance.org/resource/national-public-perception-mental-health-and-suicide-prevention-survey-results">
+                        National Action Alliace for Suicide Prevention || National Public Perception of Mental Health and Suicide Prevention Survey Results</a></p>
+            </div>
         </>
     )
 }
 
-const ThinkPreventablePie = ( props: any ) =>  {
+const ThinkPreventablePie = (props: any) => {
     console.log('think preventable', think_prvntble)
 
     return (
@@ -150,44 +146,44 @@ const ThinkPreventablePie = ( props: any ) =>  {
                 cornerRadius={3}
                 activeOuterRadiusOffset={8}
                 borderWidth={1}
-                borderColor={{ from: 'color', modifiers: [ [ 'darker', 0.2 ] ] }}
+                borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}
                 arcLinkLabelsSkipAngle={10}
                 arcLinkLabelsTextColor="#333333"
                 arcLinkLabelsThickness={2}
                 arcLinkLabelsColor={{ from: 'color' }}
                 arcLabelsSkipAngle={10}
-                arcLabelsTextColor={{ from: 'color', modifiers: [ [ 'darker', 2 ] ] }}
-                // legends={[
-                //     {
-                //         anchor: 'bottom',
-                //         direction: 'row',
-                //         justify: false,
-                //         translateX: 0,
-                //         translateY: 56,
-                //         itemsSpacing: 0,
-                //         itemWidth: 100,
-                //         itemHeight: 18,
-                //         itemTextColor: '#999',
-                //         itemDirection: 'left-to-right',
-                //         itemOpacity: 1,
-                //         symbolSize: 18,
-                //         symbolShape: 'circle',
-                //         effects: [
-                //             {
-                //                 on: 'hover',
-                //                 style: {
-                //                     itemTextColor: '#000'
-                //                 }
-                //             }
-                //         ]
-                //     }
-                // ]}
+                arcLabelsTextColor={{ from: 'color', modifiers: [['darker', 2]] }}
+            // legends={[
+            //     {
+            //         anchor: 'bottom',
+            //         direction: 'row',
+            //         justify: false,
+            //         translateX: 0,
+            //         translateY: 56,
+            //         itemsSpacing: 0,
+            //         itemWidth: 100,
+            //         itemHeight: 18,
+            //         itemTextColor: '#999',
+            //         itemDirection: 'left-to-right',
+            //         itemOpacity: 1,
+            //         symbolSize: 18,
+            //         symbolShape: 'circle',
+            //         effects: [
+            //             {
+            //                 on: 'hover',
+            //                 style: {
+            //                     itemTextColor: '#000'
+            //                 }
+            //             }
+            //         ]
+            //     }
+            // ]}
             />
         </div>
     )
 }
 
-const TalkingPublicPie = ( props: any ) =>  {
+const TalkingPublicPie = (props: any) => {
     // const data = props.data;
     // console.log('data', data)
     // const keys = Object.keys(data);
@@ -198,7 +194,7 @@ const TalkingPublicPie = ( props: any ) =>  {
     return (
         <div style={{ "height": "500px", "width": "700px" }}>
             <h6>58% of people are comfortable talking openly about mental health in public</h6>
-      
+
             <ResponsivePie
                 data={talking_public}
                 margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
@@ -207,44 +203,44 @@ const TalkingPublicPie = ( props: any ) =>  {
                 cornerRadius={3}
                 activeOuterRadiusOffset={8}
                 borderWidth={1}
-                borderColor={{ from: 'color', modifiers: [ [ 'darker', 0.2 ] ] }}
+                borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}
                 arcLinkLabelsSkipAngle={10}
                 arcLinkLabelsTextColor="#333333"
                 arcLinkLabelsThickness={2}
                 arcLinkLabelsColor={{ from: 'color' }}
                 arcLabelsSkipAngle={10}
-                arcLabelsTextColor={{ from: 'color', modifiers: [ [ 'darker', 2 ] ] }}
-                // legends={[
-                //     {
-                //         anchor: 'bottom',
-                //         direction: 'row',
-                //         justify: false,
-                //         translateX: 0,
-                //         translateY: 56,
-                //         itemsSpacing: 0,
-                //         itemWidth: 100,
-                //         itemHeight: 18,
-                //         itemTextColor: '#999',
-                //         itemDirection: 'left-to-right',
-                //         itemOpacity: 1,
-                //         symbolSize: 18,
-                //         symbolShape: 'circle',
-                //         effects: [
-                //             {
-                //                 on: 'hover',
-                //                 style: {
-                //                     itemTextColor: '#000'
-                //                 }
-                //             }
-                //         ]
-                //     }
-                // ]}
+                arcLabelsTextColor={{ from: 'color', modifiers: [['darker', 2]] }}
+            // legends={[
+            //     {
+            //         anchor: 'bottom',
+            //         direction: 'row',
+            //         justify: false,
+            //         translateX: 0,
+            //         translateY: 56,
+            //         itemsSpacing: 0,
+            //         itemWidth: 100,
+            //         itemHeight: 18,
+            //         itemTextColor: '#999',
+            //         itemDirection: 'left-to-right',
+            //         itemOpacity: 1,
+            //         symbolSize: 18,
+            //         symbolShape: 'circle',
+            //         effects: [
+            //             {
+            //                 on: 'hover',
+            //                 style: {
+            //                     itemTextColor: '#000'
+            //                 }
+            //             }
+            //         ]
+            //     }
+            // ]}
             />
         </div>
     )
 }
 
-const InterestPie = ( props: any ) =>  {
+const InterestPie = (props: any) => {
     // const data = props.data;
     // console.log('data', data)
     // const keys = Object.keys(data);
@@ -255,7 +251,7 @@ const InterestPie = ( props: any ) =>  {
     return (
         <div style={{ "height": "500px", "width": "700px" }}>
             <h6>78% of people would be interested in learning how to play a role in helping someone who may be suicidal</h6>
-      
+
             <ResponsivePie
                 data={interest}
                 margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
@@ -264,38 +260,38 @@ const InterestPie = ( props: any ) =>  {
                 cornerRadius={3}
                 activeOuterRadiusOffset={8}
                 borderWidth={1}
-                borderColor={{ from: 'color', modifiers: [ [ 'darker', 0.2 ] ] }}
+                borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}
                 arcLinkLabelsSkipAngle={10}
                 arcLinkLabelsTextColor="#333333"
                 arcLinkLabelsThickness={2}
                 arcLinkLabelsColor={{ from: 'color' }}
                 arcLabelsSkipAngle={10}
-                arcLabelsTextColor={{ from: 'color', modifiers: [ [ 'darker', 2 ] ] }}
-                // legends={[
-                //     {
-                //         anchor: 'bottom',
-                //         direction: 'row',
-                //         justify: false,
-                //         translateX: 0,
-                //         translateY: 56,
-                //         itemsSpacing: 0,
-                //         itemWidth: 100,
-                //         itemHeight: 18,
-                //         itemTextColor: '#999',
-                //         itemDirection: 'left-to-right',
-                //         itemOpacity: 1,
-                //         symbolSize: 18,
-                //         symbolShape: 'circle',
-                //         effects: [
-                //             {
-                //                 on: 'hover',
-                //                 style: {
-                //                     itemTextColor: '#000'
-                //                 }
-                //             }
-                //         ]
-                //     }
-                // ]}
+                arcLabelsTextColor={{ from: 'color', modifiers: [['darker', 2]] }}
+            // legends={[
+            //     {
+            //         anchor: 'bottom',
+            //         direction: 'row',
+            //         justify: false,
+            //         translateX: 0,
+            //         translateY: 56,
+            //         itemsSpacing: 0,
+            //         itemWidth: 100,
+            //         itemHeight: 18,
+            //         itemTextColor: '#999',
+            //         itemDirection: 'left-to-right',
+            //         itemOpacity: 1,
+            //         symbolSize: 18,
+            //         symbolShape: 'circle',
+            //         effects: [
+            //             {
+            //                 on: 'hover',
+            //                 style: {
+            //                     itemTextColor: '#000'
+            //                 }
+            //             }
+            //         ]
+            //     }
+            // ]}
             />
         </div>
     )
@@ -303,5 +299,5 @@ const InterestPie = ( props: any ) =>  {
 
 export default PreventionUserVis;
 
-/* 
+/*
          */

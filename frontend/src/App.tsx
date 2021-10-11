@@ -6,45 +6,40 @@ import PrefabVizzes from 'PrefabVizzes';
 function App() {
   const [section, setSection] = useState(0);
 
+  const next = () => {
+    const nextSection = section === (sectionArray.length - 1) ? 0 : section + 1;
+    setSection(nextSection);
+  }
+
   const sectionArray = [
     <Welcome />,
     <PrefabVizzes />,
-    <Questions />,
+    <Questions nextCallback={next} />,
     <Thanks />
   ]
 
-  const next = () => {
-    setSection(section + 1);
-  }
+
   const getSection = (pageNum: number) => {
     return sectionArray[pageNum];
   }
 
   return (
-    <>
-      <h1>Website Title</h1>
+    <div className="container">
+      <h1>Mental Health and Suicide by the Numbers</h1>
       <div>
         {getSection(section)}
 
-        <button type="button" onClick={next}>
-          Next Section
+        <button className="u-pull-right" type="button" onClick={next}>
+          {section === (sectionArray.length - 1) ? "Back to Home" : "Next Section"}
         </button>
       </div>
-    </>
-  );
-
-  return (
-    <div className="App">
-      <Welcome />,
-      <PrefabVizzes />,
-      <Questions />
     </div>
-  )
+  );
 }
 
 const Welcome = () => {
   return (
-    <div>
+    <div className="section">
       <h2>Welcome!</h2>
       <p>Thank you for taking the time to come visit our site!</p>
       <p>Mental health is a broad and complicated subject. The goal of this website is to present
@@ -65,7 +60,7 @@ const Welcome = () => {
 
 const Thanks = () => {
   return (
-    <div>
+    <div className="section">
       <h1>Thank You!</h1>
       <h2>Resources</h2>
 
@@ -92,31 +87,6 @@ const Thanks = () => {
           Become a Suicide Prevention Advocate</a></li>
 
         <br />
-        {/*<div style={{ "height": "600px", "width": "1000px" }}>
-        <USMentalIllness />
-      </div>
-      <div style={{ "height": "600px", "width": "1000px" }}>
-        <SuicideByState />
-      </div>
-      <div style={{ "height": "600px", "width": "1000px" }}>
-        <WorldwideMentalIllness />
-      </div>
-      <div style={{ "height": "600px", "width": "100%" }}>
-        <WorldwideSuicide />
-      </div>
-      <div style={{ "height": "600px", "width": "1000px" }}>
-        <PHQ9Correlation />
-      </div>
-      <div style={{ "height": "600px", "width": "1700px" }}>
-        <BarriersNCSR />
-      </div>
-      <div style={{ "height": "600px", "width": "1000px" }}>
-        <BarriersNCSRGrouped />
-      </div>
-      <div style={{ "height": "600px", "width": "1090px" }}>
-        <FirstYearCollegeBarriers />
-      </div>
-      */}
 
       </ul>
 
