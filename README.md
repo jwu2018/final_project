@@ -111,5 +111,10 @@ If you update the backend, you will have to stop the server and rerun it. This i
 ## Group Member Contributions
 ### Alan Healy
 ### Alex Kinley
+- Basic Project Structure
+- Some of the styling
+- Prevelance, Factors, and PHQ-9 data vizzes and survey sections
+- Website flow/data management
+- Backend integration
 ### Niko Pelletier
 ### Jyalu Wu

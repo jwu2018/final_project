@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Mental Health and Suicide by the Numbers</h1>
+      <h1 style={{ textAlign: 'center', marginBottom: '1em' }}>Mental Health and Suicide by the Numbers</h1>
       <div>
         {getSection(section)}
 
