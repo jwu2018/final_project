@@ -5,7 +5,9 @@ import FactorsVis from 'SurveySections/FactorsVis';
 import Prevelance from 'SurveySections/Prevelance';
 import PrevelanceVis from 'SurveySections/PrevelanceVis';
 import Prevention from 'SurveySections/Prevention';
+import PreventionUserVis from 'SurveySections/PreventionUserVis';
 import Treatment from 'SurveySections/Treatment';
+import PreventionVizzes from 'visualizations/PreventionVizzes';
 
 
 const Questions = () => {
@@ -19,8 +21,9 @@ const Questions = () => {
         <FactorsVis data={data} />,
         <Treatment data={data} dataCallback={setData} />,
         <ExampleVis data={data} />,
+        <PreventionVizzes />,
         <Prevention data={data} dataCallback={setData} />,
-        <ExampleVis data={data} />,
+        <PreventionUserVis data={data} />
     ]
     const next = () => {
         console.log("data is:");
